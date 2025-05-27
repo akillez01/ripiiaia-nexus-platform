@@ -1,4 +1,15 @@
-<script>
-  // Redireciona todas as rotas para o index.html (SPA)
-  location.replace('/ripiiaia-nexus-platform/' + location.search + location.hash);
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecionando...</title>
+  </head>
+  <body>
+    <script>
+      // Redireciona todas as rotas para o index.html (SPA)
+      var l = window.location;
+      var path = l.pathname.replace(/^\/ripiiaia-nexus-platform\//, '');
+      window.location.replace('/ripiiaia-nexus-platform/?redirect=1#' + path + l.search + l.hash);
+    </script>
+  </body>
+</html>
